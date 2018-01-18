@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Stuff</h3>
+
+<select id="CPU">
+  <option selected value="300">Ryzen 7 - 1700x</option>
+  <option selected value="200">Ryzen 5 - 1500</option>
+</select>
+
+<select id="GPU">
+  <option selected value="250">Rx 580</option>
+  <option selected value="250">Gtx 1060</option>
+</select>
+
+
+
+
+<button onclick="TotalPrice()">Calculate Total Worth</button>
+<p id="TotalPrice">Total</p>
+
+
+<script>
+function TotalPrice() {
+    var cpu = document.getElementById("CPU").value;
+	var gpu = document.getElementById("GPU").value;
+
+    document.getElementById("TotalPrice").innerHTML = parseInt(cpu) + parseInt(gpu);
+}
+</script>
+
+</body>
+</html>
