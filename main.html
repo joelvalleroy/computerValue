@@ -2,31 +2,63 @@
 <html>
 <body>
 
-<h3>Stuff</h3>
+<p></p><p></p><p></p>
 
-<select id="CPU">
-  <option selected value="300">Ryzen 7 - 1700x</option>
-  <option selected value="200">Ryzen 5 - 1500</option>
+CPU: <select id="CPU">
+  <option selected value="99" style="background-color: lightblue"> Ryzen 3 - 1200 </option>
+  <option selected value="115" style="background-color: lightblue"> Ryzen 3 - 1300X  </option>
+  <option selected value="150" style="background-color: teal"> Ryzen 5 - 1400   </option>
+  <option selected value="162" style="background-color: teal"> Ryzen 5 - 1500X  </option>
+  <option selected value="198" style="background-color: lightgreen"> Ryzen 5 - 1600   </option>
+  <option selected value="213" style="background-color: lightgreen"> Ryzen 5 - 1600X  </option>
+  <option selected value="289" style="background-color: green"> Ryzen 7 - 1700   </option>
+  <option selected value="309" style="background-color: green"> Ryzen 7 - 1700X  </option>
+  <option selected value="349" style="background-color: green"> Ryzen 7 - 1800X  </option>
+  <option selected value="400" style="background-color: red"> Ryzen Threadipper - 1900X </option>
+  <option selected value="674" style="background-color: red"> Ryzen Threadipper - 1920X </option>
+  <option selected value="800" style="background-color: red"> Ryzen Threadipper - 1950X </option>
 </select>
 
-<select id="GPU">
-  <option selected value="250">Rx 580</option>
-  <option selected value="250">Gtx 1060</option>
+GPU: <select id="GPU">
+  <option selected value="135" style="background-color: lightblue">Gtx 1050</option>
+  <option selected value="184" style="background-color: teal">Gtx 1050 TI</option>
+  <option selected value="264" style="background-color: teal">Gtx 1060 - 3 GB</option>
+  <option selected value="499" style="background-color: lightgreen">Gtx 1060 - 6 GB</option>
+  <option selected value="800" style="background-color: green">Gtx 1070</option>
+  <option selected value="900" style="background-color: darkgreen">Gtx 1070 TI</option>
+  <option selected value="1000" style="background-color: red">Gtx 1080</option>
+  <option selected value="904" style="background-color: red">Gtx 1080 TI</option>
+
+  <option selected value="500" style="background-color: lightblue">Rx 570</option>
+  <option selected value="500" style="background-color: teal">Rx 580 - 4 GB</option>
+  <option selected value="450" style="background-color: lightgreen">Rx 580 - 8 GB</option>
+  <option selected value="800" style="background-color: red">Rx Vega 64</option>
 </select>
 
+RAM: <select id="RAM">
+  <option selected value="96" style="background-color: lightgreen">8 GB - 2400</option>
+  <option selected value="170" style="background-color: darkgreen">16 GB - 2400</option>
+  <option selected value="324" style="background-color: red">32 GB - 2400</option>
+</select>
 
-
+SSD: <select id="SSD">
+  <option selected value="53">128 GB SATA</option>
+  <option selected value="74">256 GB SATA</option>
+  <option selected value="130">512 GB SATA</option>
+</select>
 
 <button onclick="TotalPrice()">Calculate Total Worth</button>
 <p id="TotalPrice">Total</p>
 
-
+<p></p>
 <script>
 function TotalPrice() {
     var cpu = document.getElementById("CPU").value;
 	var gpu = document.getElementById("GPU").value;
+	var ram = document.getElementById("RAM").value;
+	var ssd = document.getElementById("SSD").value;
 
-    document.getElementById("TotalPrice").innerHTML = parseInt(cpu) + parseInt(gpu);
+    document.getElementById("TotalPrice").innerHTML = parseInt(cpu) + parseInt(gpu) + parseInt(ram) + parseInt(ssd);
 }
 </script>
 
